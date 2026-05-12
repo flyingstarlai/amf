@@ -24,7 +24,7 @@ export default function Experience() {
                 </div>
               </div>
               <div className={`timeline-${index % 2 === 0 ? "start" : "end"} mb-10`}>
-                <div className="timeline-box border border-base-300/50 bg-base-100 p-5 rounded-xl">
+                <div className="timeline-box border border-dashed border-base-300/50 bg-base-100 p-5 rounded-xl">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
                     <h3 className="text-lg font-bold">{job.title}</h3>
                     <span className="text-xs text-base-content/50 font-mono">{job.period}</span>
