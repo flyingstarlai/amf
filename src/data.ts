@@ -1,3 +1,6 @@
+import profileLight from "/profile.webp"
+import profileDark from "/profile-dark.webp"
+
 export interface Profile {
   name: string
   titles: string[]
@@ -25,8 +28,8 @@ export interface Education {
 export const profile: Profile = {
   name: "Andrian Muzakki Firmansyah",
   titles: ["Software Developer", "AI Engineer", "Technical Contributor"],
-  photoLight: new URL("/profile.webp", import.meta.env.BASE_URL).href,
-  photoDark: new URL("/profile-dark.webp", import.meta.env.BASE_URL).href,
+  photoLight: profileLight,
+  photoDark: profileDark,
   summary:
     "Full-stack engineer and AI practitioner with over 10 years of experience building software across Indonesia and Taiwan. Specialized in Android (Kotlin), iOS, React, and AI/ML — from mobile apps and enterprise systems to IoT and smart logistics platforms. Currently working as an independent contractor, maintaining internal tools and integrating AI pipelines for logistics companies in Taiwan.",
 }
