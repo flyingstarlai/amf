@@ -17,6 +17,7 @@ export const ui: Record<Lang, Record<string, string>> = {
     technicalSkills: "Technical Skills",
     interests: "Interests",
     passions: "Passions",
+    downloadPdf: "Download PDF",
     interestsSubtitle: "What Drives Me",
   },
   "zh-TW": {
@@ -36,5 +37,6 @@ export const ui: Record<Lang, Record<string, string>> = {
     interests: "興趣",
     passions: "熱愛",
     interestsSubtitle: "驅動我的事物",
+    downloadPdf: "下載 PDF",
   },
 }

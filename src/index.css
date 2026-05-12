@@ -16,3 +16,20 @@ html {
     transform: scale(1);
   }
 }
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .min-h-screen {
+    min-height: auto !important;
+  }
+  .timeline-box {
+    border: 1px dashed #999 !important;
+  }
+}

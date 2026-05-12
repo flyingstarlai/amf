@@ -42,7 +42,7 @@ export default function App() {
       <LangContext.Provider value={{ lang, toggleLang }}>
         <div className="min-h-screen bg-base-100">
           <Navbar />
-          <main>
+          <main id="cv-content">
             <Hero />
             <Summary />
             <Experience />
