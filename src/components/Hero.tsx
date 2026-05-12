@@ -16,9 +16,10 @@ export default function Hero() {
         <div className="shrink-0">
           <div className="w-48 h-48 lg:w-64 lg:h-64 rounded-full overflow-hidden ring-4 ring-primary/20 ring-offset-4 ring-offset-base-100 shadow-xl">
             <img
+              key={photo}
               src={photo}
               alt={profile.name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover animate-[fadeScale_0.4s_ease-out]"
             />
           </div>
         </div>
