@@ -225,7 +225,7 @@ const educationData: Record<Lang, Education[]> = {
     {
       school: "Taiwan Shoufu University",
       degree: "Multimedia And Game Design",
-      period: "Jul 2014 – Sep 2018",
+      period: "2014 – 2018",
     },
     {
       school: "Surabaya International Institute Business and Technology",
@@ -240,14 +240,14 @@ const educationData: Record<Lang, Education[]> = {
     {
       school: "Stikom Surabaya",
       degree: "Information System",
-      period: "Jul 2007 – Dec 2011",
+      period: "2007 – 2011",
     },
   ],
   "zh-TW": [
     {
       school: "台灣首府大學",
       degree: "多媒體與遊戲設計",
-      period: "2014 年 7 月 – 2018 年 9 月",
+      period: "2014 – 2018",
     },
     {
       school: "SIIBT",
@@ -262,7 +262,7 @@ const educationData: Record<Lang, Education[]> = {
     {
       school: "Stikom Surabaya",
       degree: "資訊系統",
-      period: "2007 年 7 月 – 2011 年 12 月",
+      period: "2007 – 2011",
     },
   ],
 }
