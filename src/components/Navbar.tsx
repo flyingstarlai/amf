@@ -7,6 +7,7 @@ const navLinks = [
   { key: "experience", href: "#experience" },
   { key: "education", href: "#education" },
   { key: "skills", href: "#skills" },
+  { key: "interests", href: "#interests" },
 ] as const
 
 export default function Navbar() {

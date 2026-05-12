@@ -15,6 +15,9 @@ export const ui: Record<Lang, Record<string, string>> = {
     background: "Background",
     expertise: "Expertise",
     technicalSkills: "Technical Skills",
+    interests: "Interests",
+    passions: "Passions",
+    interestsSubtitle: "What Drives Me",
   },
   "zh-TW": {
     about: "關於",
@@ -30,5 +33,8 @@ export const ui: Record<Lang, Record<string, string>> = {
     background: "背景",
     expertise: "專長",
     technicalSkills: "技術技能",
+    interests: "興趣",
+    passions: "熱愛",
+    interestsSubtitle: "驅動我的事物",
   },
 }

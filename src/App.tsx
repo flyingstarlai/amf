@@ -7,6 +7,7 @@ import Summary from "./components/Summary"
 import Experience from "./components/Experience"
 import Education from "./components/Education"
 import Skills from "./components/Skills"
+import Interests from "./components/Interests"
 import Footer from "./components/Footer"
 
 export default function App() {
@@ -46,8 +47,9 @@ export default function App() {
             <Summary />
             <Experience />
             <Education />
-            <Skills />
-          </main>
+          <Skills />
+          <Interests />
+        </main>
           <Footer />
         </div>
       </LangContext.Provider>

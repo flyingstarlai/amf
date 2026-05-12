@@ -296,6 +296,28 @@ const skillsData: Record<Lang, string[]> = {
   ],
 }
 
+export interface Interest {
+  title: string
+  description: string
+}
+
+const interestsData: Record<Lang, Interest[]> = {
+  en: [
+    {
+      title: "Game Development",
+      description:
+        "Beyond software engineering, I have a strong interest in game development — exploring game mechanics, interactive storytelling, and the technical challenges of building immersive digital experiences. This passion drives my curiosity in graphics programming and game design.",
+    },
+  ],
+  "zh-TW": [
+    {
+      title: "遊戲開發",
+      description:
+        "除了軟體工程之外，我對遊戲開發有著濃厚的興趣 — 探索遊戲機制、互動敘事，以及建構沉浸式數位體驗的技術挑戰。這份熱情驅動著我對圖形程式設計與遊戲設計的好奇心。",
+    },
+  ],
+}
+
 export function getProfile(lang: Lang) {
   return profileData[lang]
 }
@@ -310,4 +332,8 @@ export function getEducation(lang: Lang) {
 
 export function getSkills(lang: Lang) {
   return skillsData[lang]
+}
+
+export function getInterests(lang: Lang) {
+  return interestsData[lang]
 }
