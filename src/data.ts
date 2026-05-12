@@ -228,7 +228,7 @@ const educationData: Record<Lang, Education[]> = {
       period: "Jul 2014 – Sep 2018",
     },
     {
-      school: "SIIBT",
+      school: "Surabaya International Institute Business and Technology",
       degree: "Mandarin Business",
       period: "2012 – 2014",
     },
