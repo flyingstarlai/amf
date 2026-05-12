@@ -308,12 +308,32 @@ const interestsData: Record<Lang, Interest[]> = {
       description:
         "Beyond software engineering, I have a strong interest in game development — exploring game mechanics, interactive storytelling, and the technical challenges of building immersive digital experiences. This passion drives my curiosity in graphics programming and game design.",
     },
+    {
+      title: "Traveling",
+      description:
+        "Living and working across Indonesia and Taiwan has sparked my love for travel. Exploring new cultures, cuisines, and landscapes broadens my perspective and inspires creativity in both life and work.",
+    },
+    {
+      title: "Photography",
+      description:
+        "I enjoy capturing moments through photography — from street scenes and landscapes to cultural events. It's a creative outlet that complements my technical mindset, training my eye for detail and composition.",
+    },
   ],
   "zh-TW": [
     {
       title: "遊戲開發",
       description:
         "除了軟體工程之外，我對遊戲開發有著濃厚的興趣 — 探索遊戲機制、互動敘事，以及建構沉浸式數位體驗的技術挑戰。這份熱情驅動著我對圖形程式設計與遊戲設計的好奇心。",
+    },
+    {
+      title: "旅行",
+      description:
+        "在印尼與台灣的生活與工作經歷，點燃了我對旅行的熱愛。探索新文化、美食與風景，拓展了我的視野，也為生活與工作帶來創意靈感。",
+    },
+    {
+      title: "攝影",
+      description:
+        "我喜歡透過攝影捕捉當下的瞬間 — 從街景、風景到文化活動。這是一個與技術思維互補的創作出口，訓練我對細節與構圖的敏銳度。",
     },
   ],
 }
