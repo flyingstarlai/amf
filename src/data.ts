@@ -76,7 +76,7 @@ const experienceData: Record<Lang, Experience[]> = {
       skills: ["Deep Learning", "OCR", "Object Detection", "Image Segmentation", "PyTorch"],
     },
     {
-      title: "Senior Software Developer",
+      title: "Senior Software Engineer",
       company: "TWSBP",
       type: "Full-time",
       location: "Tainan City, Taiwan",

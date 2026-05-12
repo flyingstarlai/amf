@@ -1,7 +1,7 @@
 import { useTheme } from "./ThemeContext"
 import { useLang } from "./LangContext"
 import { ui } from "../i18n"
-import { ArrowDownTrayIcon, MoonIcon, SunIcon, Bars3Icon } from "@heroicons/react/24/outline"
+import { MoonIcon, SunIcon, Bars3Icon } from "@heroicons/react/24/outline"
 
 const navLinks = [
   { key: "about", href: "#summary" },
@@ -56,14 +56,6 @@ export default function Navbar() {
           aria-label="Toggle language"
         >
           {lang === "en" ? "中" : "EN"}
-        </button>
-        <button
-          onClick={() => window.print()}
-          className="btn btn-ghost btn-sm btn-circle"
-          aria-label={t.downloadPdf}
-          title={t.downloadPdf}
-        >
-          <ArrowDownTrayIcon className="w-5 h-5" />
         </button>
         <button
           onClick={toggleTheme}
