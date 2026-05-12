@@ -1,4 +1,4 @@
-# My CV
+# AMF
 
 A personal portfolio CV built with React, TypeScript, Tailwind CSS, and Vite.
 
