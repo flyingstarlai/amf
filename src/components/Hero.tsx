@@ -1,8 +1,13 @@
-import { profile } from "../data"
+import { useLang } from "./LangContext"
+import { getProfile } from "../data"
 import { useTheme } from "./ThemeContext"
+import { ui } from "../i18n"
 
 export default function Hero() {
   const { theme } = useTheme()
+  const { lang } = useLang()
+  const profile = getProfile(lang)
+  const t = ui[lang]
   const photo = theme === "dark" ? profile.photoDark : profile.photoLight
 
   return (
@@ -18,7 +23,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="text-center lg:text-left">
-          <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">Hello, I&apos;m</p>
+          <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">{t.helloIm}</p>
           <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight">
             {profile.name}
           </h1>
@@ -27,10 +32,10 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-8">
             <a href="#experience" className="btn btn-primary btn-sm rounded-full px-6">
-              View Experience
+              {t.viewExperience}
             </a>
             <a href="#summary" className="btn btn-ghost btn-sm rounded-full px-6">
-              About Me
+              {t.aboutMe}
             </a>
           </div>
         </div>

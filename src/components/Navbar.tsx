@@ -1,14 +1,18 @@
 import { useTheme } from "./ThemeContext"
+import { useLang } from "./LangContext"
+import { ui } from "../i18n"
 
 const navLinks = [
-  { label: "About", href: "#summary" },
-  { label: "Experience", href: "#experience" },
-  { label: "Education", href: "#education" },
-  { label: "Skills", href: "#skills" },
-]
+  { key: "about", href: "#summary" },
+  { key: "experience", href: "#experience" },
+  { key: "education", href: "#education" },
+  { key: "skills", href: "#skills" },
+] as const
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme()
+  const { lang, toggleLang } = useLang()
+  const t = ui[lang]
 
   return (
     <nav className="navbar bg-base-100/70 backdrop-blur-xl fixed top-0 z-50 border-b border-base-300/50 px-6 lg:px-12">
@@ -25,7 +29,7 @@ export default function Navbar() {
                 href={link.href}
                 className="text-base-content/60 hover:text-base-content transition-colors duration-200"
               >
-                {link.label}
+                {t[link.key]}
               </a>
             </li>
           ))}
@@ -41,11 +45,18 @@ export default function Navbar() {
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow-lg bg-base-100 rounded-xl w-48 border border-base-300/50">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="rounded-lg">{link.label}</a>
+                <a href={link.href} className="rounded-lg">{t[link.key]}</a>
               </li>
             ))}
           </ul>
         </div>
+        <button
+          onClick={toggleLang}
+          className="btn btn-ghost btn-sm btn-circle text-xs font-bold"
+          aria-label="Toggle language"
+        >
+          {lang === "en" ? "中" : "EN"}
+        </button>
         <button
           onClick={toggleTheme}
           className="btn btn-ghost btn-sm btn-circle"

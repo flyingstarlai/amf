@@ -1,11 +1,17 @@
-import { experience } from "../data"
+import { useLang } from "./LangContext"
+import { getExperience } from "../data"
+import { ui } from "../i18n"
 
 export default function Experience() {
+  const { lang } = useLang()
+  const experience = getExperience(lang)
+  const t = ui[lang]
+
   return (
     <section id="experience" className="py-24 px-6 lg:px-12">
       <div className="max-w-4xl mx-auto">
-        <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3 text-center">Career</p>
-        <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4 text-center">Work Experience</h2>
+        <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3 text-center">{t.career}</p>
+        <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4 text-center">{t.workExperience}</h2>
         <div className="divider divider-primary w-16 mx-auto mb-12"></div>
 
         <ul className="timeline timeline-vertical timeline-compact">

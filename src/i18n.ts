@@ -1,0 +1,34 @@
+import type { Lang } from "./components/LangContext"
+
+export const ui: Record<Lang, Record<string, string>> = {
+  en: {
+    about: "About",
+    experience: "Experience",
+    education: "Education",
+    skills: "Skills",
+    helloIm: "Hello, I'm",
+    viewExperience: "View Experience",
+    aboutMe: "About Me",
+    professionalSummary: "Professional Summary",
+    career: "Career",
+    workExperience: "Work Experience",
+    background: "Background",
+    expertise: "Expertise",
+    technicalSkills: "Technical Skills",
+  },
+  "zh-TW": {
+    about: "關於",
+    experience: "經歷",
+    education: "學歷",
+    skills: "技能",
+    helloIm: "你好，我是",
+    viewExperience: "查看經歷",
+    aboutMe: "關於我",
+    professionalSummary: "專業摘要",
+    career: "職涯",
+    workExperience: "工作經歷",
+    background: "背景",
+    expertise: "專長",
+    technicalSkills: "技術技能",
+  },
+}

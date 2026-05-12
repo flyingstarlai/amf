@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { ThemeContext, type Theme } from "./components/ThemeContext"
+import { LangContext, type Lang } from "./components/LangContext"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Summary from "./components/Summary"
@@ -16,26 +17,40 @@ export default function App() {
     return "light"
   })
 
+  const [lang, setLang] = useState<Lang>(() => {
+    if (typeof window !== "undefined") {
+      return (localStorage.getItem("lang") as Lang) || "en"
+    }
+    return "en"
+  })
+
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme)
     localStorage.setItem("theme", theme)
   }, [theme])
 
+  useEffect(() => {
+    localStorage.setItem("lang", lang)
+  }, [lang])
+
   const toggleTheme = () => setTheme((t) => (t === "light" ? "dark" : "light"))
+  const toggleLang = () => setLang((l) => (l === "en" ? "zh-TW" : "en"))
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="min-h-screen bg-base-100">
-        <Navbar />
-        <main>
-          <Hero />
-          <Summary />
-          <Experience />
-          <Education />
-          <Skills />
-        </main>
-        <Footer />
-      </div>
+      <LangContext.Provider value={{ lang, toggleLang }}>
+        <div className="min-h-screen bg-base-100">
+          <Navbar />
+          <main>
+            <Hero />
+            <Summary />
+            <Experience />
+            <Education />
+            <Skills />
+          </main>
+          <Footer />
+        </div>
+      </LangContext.Provider>
     </ThemeContext.Provider>
   )
 }
